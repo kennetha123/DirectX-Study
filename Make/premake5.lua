@@ -31,19 +31,19 @@ include (trunk .. "Externals/imgui/project")
 -------------------------------------------------------------------------------------
 
 project "DxStudy"
-	location (trunk .. "Engine")
+	location (trunk .. "Project")
 	kind "WindowedApp"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
 	
-	targetdir 	(trunk .. "%{prj.name}/bin/" .. outputName)
-	objdir		(trunk .. "%{prj.name}/obj/" .. outputName)
+	targetdir 	(trunk .. "Project/bin/" .. outputName)
+	objdir		(trunk .. "Project/obj/" .. outputName)
 	
 	files
 	{
-		(trunk .. "Engine/Source/**.h"),
-		(trunk .. "Engine/Source/**.cpp"),
+		(trunk .. "Project/Source/**.h"),
+		(trunk .. "Project/Source/**.cpp"),
 	}
 	
 	defines
@@ -54,7 +54,7 @@ project "DxStudy"
 	
 	includedirs
 	{
-		(trunk .. "%{prj.name}/Source"),
+		(trunk .. "%Project/Source"),
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.stb_image}",
 		"%{IncludeDir.spdlog}"
