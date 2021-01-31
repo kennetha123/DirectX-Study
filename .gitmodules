@@ -1,0 +1,8 @@
+[submodule "Externals/imgui"]
+	path = Externals/imgui
+	url = https://github.com/kennetha123/imgui
+	branch = docking
+[submodule "Externals/spdlog"]
+	path = Externals/spdlog
+	url = https://github.com/kennetha123/spdlog
+	branch = v2.x
