@@ -10,7 +10,7 @@
 #include <string>
 
 template <typename T>
-inline void SafeReleaseCOM(&T ptr)
+inline void SafeReleaseCOM(T& ptr)
 {
 	if (ptr != NULL)
 	{
