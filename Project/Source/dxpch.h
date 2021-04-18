@@ -8,3 +8,13 @@
 
 #include <iostream>
 #include <string>
+
+template <typename T>
+inline void SafeReleaseCOM(&T ptr)
+{
+	if (ptr != NULL)
+	{
+		ptr->Release();
+		ptr = NULL;
+	}
+}

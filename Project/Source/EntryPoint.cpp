@@ -29,10 +29,10 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance, PWSTR pCmdLine,
 
 		CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
 
-		NULL,		// Parent Window
-		NULL,		// Menu
-		hInstance,	// Handle Instance
-		prevInstance// Additional application data
+		NULL,					// Parent Window
+		NULL,					// Menu
+		hInstance,				// Handle Instance
+		prevInstance			// Additional application data
 		);
 
 	if (hWnd == NULL)
