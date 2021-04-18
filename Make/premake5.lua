@@ -12,14 +12,6 @@ workspace "DirectX-Study"
 
 trunk = "../"
 
--- struct to easier include dir rather than using path
-IncludeDir = {}
-IncludeDir["ImGui"] 	= 	(trunk .. "Externals/imgui")
---IncludeDir["glm"] 		= 	(trunk .. "Externals/glm")
-IncludeDir["stb_image"] = 	(trunk .. "Externals/stb_image")
-IncludeDir["spdlog"] 	= 	(trunk .. "Externals/spdlog/include")
-
-
 -- output name for bin / obj
 outputName = "%{cfg.system}/%{cfg.buildcfg}/%{cfg.architecture}"
 
@@ -59,16 +51,8 @@ project "DxStudy"
 	includedirs
 	{
 		(trunk .. "%Project/Source"),
-		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.spdlog}"
 	}
-	
-	links
-	{
-		"ImGui",
-	}
-	
+		
 	filter "system:windows"
 		systemversion "latest"
 		
