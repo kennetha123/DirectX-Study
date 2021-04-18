@@ -15,9 +15,6 @@ trunk = "../"
 -- output name for bin / obj
 outputName = "%{cfg.system}/%{cfg.buildcfg}/%{cfg.architecture}"
 
--- take another premake to build the project
-include (trunk .. "Externals/imgui/project")
-
 -------------------------------------------------------------------------------------
 ------------------------ Engine project ---------------------------------------------	
 -------------------------------------------------------------------------------------
