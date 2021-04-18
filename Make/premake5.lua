@@ -37,8 +37,12 @@ project "DxStudy"
 	cppdialect "C++17"
 	staticruntime "on"
 	
-	targetdir 	(trunk .. "Project/bin/" .. outputName)
-	objdir		(trunk .. "Project/obj/" .. outputName)
+	targetdir 	(trunk .. "Output/bin/" .. outputName)
+	objdir		(trunk .. "Output/obj/" .. outputName)
+	
+	-- use precompile header
+	pchheader "dxpch.h"
+	pchsource (trunk .. "Project/Source/dxpch.cpp")
 	
 	files
 	{
